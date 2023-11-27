@@ -35,20 +35,20 @@ public class CalculationController extends HttpServlet	{
 		throws ServletException, IOException	{
 		
 		// パラメータの値を定義
-		String num = request.getParameter("num");
+		String dentaku = request.getParameter("dentaku");
 		String operator = request.getParameter("operator");
 		String equal = request.getParameter("operator_eq");
 		String clear = request.getParameter("clear");
 		String display =request.getParameter("display");
 		String message =request.getParameter("message");
 		
-		// テスt
-		if(request.getParameter("num") == null) {
+		// テスト
+		if(request.getParameter("dentaku") == null) {
 			message = "[ERROR] 数字を入力してください";
 		} else {
 			if(operator != null) {
 				if (operator == "+") {
-				message = Integer.toString(Integer.parseInt(num) + Integer.parseInt(num));
+				message = Integer.toString(Integer.parseInt(dentaku) + Integer.parseInt(dentaku));
 				}
 			} else {
 			message = "[ERROR] 演算子が入っていません";
@@ -56,11 +56,11 @@ public class CalculationController extends HttpServlet	{
 		}
 		
 		// ディスプレイ表示
-		request.setAttribute("display",	num);
+		request.setAttribute("display",	dentaku);
 		request.setAttribute("message",	message);
 		
 		// 計算処理メソッド
-		String calculation = calculation (operator, num);
+		String calculation = calculation (operator, dentaku);
 		
 		// フォワード
 		request.getRequestDispatcher(view).forward(request,	response);

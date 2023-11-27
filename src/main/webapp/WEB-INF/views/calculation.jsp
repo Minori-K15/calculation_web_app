@@ -14,33 +14,33 @@
 <table>
   <tbody>
   <% String display = (String)request.getAttribute("display"); %>
-  <tr><td colspan="4"><input type="text" name="display" value="<%= display %>" readonly style="width:100px;"></td></tr>
+  <tr><td colspan="4"><input type="text" name="display" value="<%= display %>" readonly></td></tr>
   <tr>
-    <td><input class="push_num" type="submit" name="num" value="7"></td>
-    <td><input class="push_num" type="submit" name="num" value="8"></td>
-    <td><input class="push_num" type="submit" name="num" value="9"></td>
-    <td><input class="push_ope" type="submit" name="operator" value="÷"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="7" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="8" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="9" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_ope" name="operator" value="÷" onclick="clickDisplay()"></td>
   </tr>
   <tr>
-    <td><input class="push_num" type="submit" name="num" value="4"></td>
-    <td><input class="push_num" type="submit" name="num" value="5"></td>
-    <td><input class="push_num" type="submit" name="num" value="6"></td>
-    <td><input class="push_ope" type="submit" name="operator" value="×"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="4" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="5" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="6" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_ope" name="operator" value="×" onclick="clickDisplay()"></td>
   </tr>
   <tr>
-    <td><input class="push_num" type="submit" name="num" value="1"></td>
-    <td><input class="push_num" type="submit" name="num" value="2"></td>
-    <td><input class="push_num" type="submit" name="num" value="3"></td>
-    <td><input class="push_ope"type="submit" name="operator" value="-"></td>
-      </tr>
-      <tr>
-      <td><input class="push_num" type="submit" name="num" value="0"></td>
-      <td><input class="push_num" type="submit" name="clear" value="C"></td>
-      <td><input class="push_poe_eq" type="submit" name="operator_eq" value="="></td>
-      <td><input class="push_ope"type="submit" name="operator" value="+"></td>
-      </tr>
-     </tbody>
-    </table>
+    <td><input type="button" class="push_num" name="dentaku" value="1" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="2" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_num" name="dentaku" value="3" onclick="clickDisplay()"></td>
+    <td><input type="button" class="push_ope" name="operator" value="-" onclick="clickDisplay()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" class="push_num" name="dentaku" value="0" onclick="clickDisplay()"></td>
+    <td><input type="reset" class="push_num" name="clear" value="C" onclick="clear_display()"></td>
+    <td><input type="submit" class="push_poe_eq" name="operator_eq" value="="></td>
+    <td><input type="button" class="push_ope" name="operator" value="+" onclick="clickDisplay()"></td>
+  </tr>
+  </tbody>
+  </table>
 </form>
 </body>
 </html>
